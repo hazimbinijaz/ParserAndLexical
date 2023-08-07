@@ -1,0 +1,68 @@
+
+1	Function → Type identifier ( ArgList ) CompoundStmt
+2	ArgList → Arg ArgList'
+3	ArgList' → , Arg ArgList'	
+4	ArgList' → ε	
+5	Arg → Type identifier	
+6	Declaration → Type IdenList ;	
+7	Type → int
+8	Type → float
+9	IdenList → identifier IdenList'
+10	IdenList' → , IdenList	
+11	IdenList' → ε	
+12	Stmt → ForStmt	
+13	Stmt → WhileStmt	
+14	Stmt → Expr ;	
+15	Stmt → IfStmt	
+16	Stmt → CompoundStmt	
+17	Stmt → Declaration	
+18	Stmt → ;	
+19	ForStmt → for ( Expr ; ForStmt'''
+20	ForStmt' → Expr ) Stmt
+21	ForStmt' → ) Stmt	
+22	ForStmt'' → ) Stmt
+23	ForStmt'' → Expr ) Stmt	
+24	ForStmt''' → ; ForStmt''
+25	ForStmt''' → Expr ; ForStmt'
+26	WhileStmt → while ( Expr ) Stmt	
+27	IfStmt → if ( Expr ) IfStmt'	
+28	IfStmt' → Stmt ElsePart	
+29	IfStmt' → IfStmt''	
+30	IfStmt'' → Stmt	
+31	IfStmt'' → ε	
+32	ElsePart → else Stmt
+33	CompoundStmt → { CompoundStmt'
+34	CompoundStmt' → StmtList }	
+35	CompoundStmt' → }	
+36	StmtList → Stmt StmtList''
+37	StmtList' → Stmt StmtList'''
+38	StmtList'' → ε	
+39	StmtList'' → StmtList'
+40	StmtList''' → StmtList'
+41	StmtList''' → ε	
+42	Expr → identifier Expr'
+43	Expr → ( Expr ) Term Mag' Rvalue'
+44	Expr → number Term Mag' Rvalue'
+45	Expr' → := Expr
+46	Expr' → Term Mag' Rvalue'
+47	Rvalue → Mag Rvalue'
+48	Rvalue' → Compare Mag Rvalue'
+49	Rvalue' → ε	
+50	Compare → ==	
+51	Compare → <	
+52	Compare → >	
+53	Compare → <=	
+54	Compare → >=	
+55	Compare → !=	
+56	Compare → <>	
+57	Mag → Term Mag'	
+58	Mag' → - Term Mag'
+59	Mag' → + Term Mag'
+60	Mag' → ε	
+61	Term → Factor Term'
+62	Term' → / Factor Term'
+63	Term' → * Factor Term'
+64	Term' → ε
+65	Factor → ( Expr )	
+66	Factor → identifier
+67	Factor → number

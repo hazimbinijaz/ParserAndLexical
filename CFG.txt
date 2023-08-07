@@ -1,0 +1,34 @@
+1.	Function -> Type identifier ( ArgList ) CompoundStmt
+2.	ArgList -> Arg ArgList'
+3.	ArgList' -> , Arg ArgList' | EPSILON
+4.	Arg -> Type identifier
+5.	Declaration -> Type IdenList ;
+6.	Type -> int | float
+7.	IdenList -> identifier IdenList'
+8.	IdenList' -> , IdenList | EPSILON
+9.	Stmt -> ForStmt | WhileStmt | Expr ; | IfStmt | CompoundStmt | Declaration | ;
+10.	ForStmt -> for ( Expr ; ForStmt'''
+11.	ForStmt' -> Expr ) Stmt  | ) Stmt
+12.	ForStmt'' -> ) Stmt | Expr ) Stmt 
+13.	ForStmt''' -> ; ForStmt''  | Expr ; ForStmt'
+14.	WhileStmt -> while ( Expr ) Stmt
+15.	IfStmt -> if ( Expr ) IfStmt'
+16.	IfStmt' -> Stmt  ElsePart | IfStmt''
+17.	IfStmt'' -> Stmt | EPSILON
+18.	ElsePart -> else Stmt
+19.	CompoundStmt -> { CompoundStmt'
+20.	CompoundStmt' -> StmtList } | }
+21.	StmtList -> Stmt StmtList''
+22.	StmtList' -> Stmt StmtList'''
+23.	StmtList'' -> EPSILON | StmtList'
+24.	StmtList''' -> StmtList' | EPSILON
+25.	Expr -> identifier Expr' | ( Expr ) Term Mag' Rvalue' | number Term Mag' Rvalue'
+26.	Expr' -> := Expr | Term Mag' Rvalue'
+27.	Rvalue -> Mag Rvalue'
+28.	Rvalue' -> Compare Mag Rvalue' | EPSILON
+29.	Compare -> == | < | > | <= | >= | != | <>
+30.	Mag -> Term Mag'
+31.	Mag' -> - Term Mag' | + Term Mag' | EPSILON
+32.	Term -> Factor Term'
+33.	Term' -> / Factor Term' | * Factor Term' | EPSILON
+34.	Factor -> ( Expr )   | identifier  | number

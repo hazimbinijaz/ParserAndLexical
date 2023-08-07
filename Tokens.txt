@@ -1,0 +1,9 @@
+<7, Number, number>
+<6, Identifier, id>
+<6, Identifier, id>
+<6, Identifier, id>
+<18, Operator, (>
+<7, Number, number>
+<2, Operator, +>
+<7, Number, number>
+<19, Operator, )>

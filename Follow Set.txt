@@ -1,0 +1,33 @@
+ArgList	)
+ArgList'	)
+Arg	,, )
+Declaration	;, for, identifier, (, number, {, while, int, float, if, else, }
+Type	identifier
+IdenList	;
+IdenList'	;
+Stmt	;, for, identifier, (, number, {, while, int, float, if, else, }
+ForStmt	;, for, identifier, (, number, {, while, int, float, if, else, }
+ForStmt'	;, for, identifier, (, number, {, while, int, float, if, else, }
+ForStmt''	;, for, identifier, (, number, {, while, int, float, if, else, }
+ForStmt'''	;, for, identifier, (, number, {, while, int, float, if, else, }
+WhileStmt	;, for, identifier, (, number, {, while, int, float, if, else, }
+IfStmt	;, for, identifier, (, number, {, while, int, float, if, else, }
+IfStmt'	;, for, identifier, (, number, {, while, int, float, if, else, }
+IfStmt''	;, for, identifier, (, number, {, while, int, float, if, else, }
+ElsePart	;, for, identifier, (, number, {, while, int, float, if, else, }
+CompoundStmt	;, for, identifier, (, number, {, while, int, float, if, else, }, $
+CompoundStmt'	;, for, identifier, (, number, {, while, int, float, if, else, }, $
+StmtList	}
+StmtList'	}
+StmtList''	}
+StmtList'''	}
+Expr	), ;
+Expr'	), ;
+Rvalue	
+Rvalue'	), ;
+Compare	(, identifier, number
+Mag	==, <, >, <=, >=, !=, <>, ), ;
+Mag'	==, <, >, <=, >=, !=, <>, ), ;
+Term	-, +, ==, <, >, <=, >=, !=, <>, ), ;
+Term'	-, +, ==, <, >, <=, >=, !=, <>, ), ;
+Factor	/, *, -, +, ==, <, >, <=, >=, !=, <>, ), ;

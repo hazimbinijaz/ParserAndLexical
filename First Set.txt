@@ -1,0 +1,34 @@
+ArgList'	,, ε
+Type	int, float
+IdenList	identifier
+IdenList'	,, ε
+Stmt	;, for, identifier, (, number, {, while, int, float, if
+ForStmt	for
+ForStmt'	), identifier, (, number
+ForStmt''	), identifier, (, number
+ForStmt'''	;, identifier, (, number
+WhileStmt	while
+IfStmt	if
+IfStmt''	ε, ;, for, identifier, (, number, {, while, int, float, if
+ElsePart	else
+CompoundStmt	{
+CompoundStmt'	}, ;, for, identifier, (, number, {, while, int, float, if
+StmtList''	ε, ;, for, identifier, (, number, {, while, int, float, if
+StmtList'''	ε, ;, for, identifier, (, number, {, while, int, float, if
+Expr	identifier, (, number
+Expr'	:=, (, identifier, number
+Rvalue'	ε, ==, <, >, <=, >=, !=, <>
+Compare	==, <, >, <=, >=, !=, <>
+Mag'	-, +, ε
+Term'	/, *, ε
+Factor	(, identifier, number
+Function	int, float
+Arg	int, float
+Declaration	int, float
+Term	(, identifier, number
+ArgList	int, float
+Mag	(, identifier, number
+Rvalue	(, identifier, number
+IfStmt'	;, for, identifier, (, number, {, while, int, float, if, ε
+StmtList	;, for, identifier, (, number, {, while, int, float, if
+StmtList'	;, for, identifier, (, number, {, while, int, float, if

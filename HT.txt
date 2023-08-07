@@ -1,0 +1,67 @@
+Type identifier ( ArgList ) CompoundStmt
+Arg ArgList'
+, Arg ArgList'	
+EPSILON	
+Type identifier	
+Type IdenList ;	
+int
+float
+identifier IdenList'
+, IdenList	
+EPSILON	
+ForStmt	
+WhileStmt	
+Expr ;	
+IfStmt	
+CompoundStmt	
+Declaration	
+;	
+for ( Expr ; ForStmt'''
+Expr ) Stmt
+) Stmt	
+) Stmt
+Expr ) Stmt	
+; ForStmt''
+Expr ; ForStmt'
+while ( Expr ) Stmt	
+if ( Expr ) IfStmt'	
+Stmt ElsePart	
+IfStmt''	
+Stmt	
+EPSILON	
+else Stmt
+{ CompoundStmt'
+StmtList }	
+}	
+Stmt StmtList''
+Stmt StmtList'''
+EPSILON	
+StmtList'
+StmtList'
+EPSILON	
+identifier Expr'
+( Expr ) Term Mag' Rvalue'
+number Term Mag' Rvalue'
+:= Expr
+Term Mag' Rvalue'
+Mag Rvalue'
+Compare Mag Rvalue'
+EPSILON	
+==	
+<	
+>	
+<=	
+>=	
+!=	
+<>	
+Term Mag'	
+- Term Mag'
++ Term Mag'
+EPSILON	
+Factor Term'
+/ Factor Term'
+* Factor Term'
+EPSILON
+( Expr )	
+identifier
+number
